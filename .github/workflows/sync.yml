@@ -1,0 +1,26 @@
+name: Sync with Upstream
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Runs every 6 hours
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout forked repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Add upstream repo
+        run: |
+          git remote add upstream https://github.com/k8sgpt-ai/k8sgpt.git
+          git fetch upstream
+
+      - name: Merge upstream changes
+        run: |
+          git checkout main  # Change to your default branch if needed
+          git merge upstream/main --allow-unrelated-histories
+          git push origin main
