@@ -14,9 +14,14 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Configure Git Identity
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
       - name: Add upstream repo
         run: |
-          git remote add upstream https://github.com/k8sgpt-ai/k8sgpt.git
+          git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
           git fetch upstream
 
       - name: Merge upstream changes
