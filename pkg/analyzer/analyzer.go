@@ -43,6 +43,14 @@ var coreAnalyzerMap = map[string]common.IAnalyzer{
 	"Node":                           NodeAnalyzer{},
 	"ValidatingWebhookConfiguration": ValidatingWebhookAnalyzer{},
 	"MutatingWebhookConfiguration":   MutatingWebhookAnalyzer{},
+	"HostPath":                       HostPathAnalyzer{},
+	"HostNetworking":                 HostNetworkingAnalyzer{},
+	"ServiceAccountToken":            ServiceAccountTokenAnalyzer{},
+	"HTTPSOnlyServiceV2":             HTTPSOnlyServiceV2Analyzer{},
+	"ReadOnlyRootFilesystem":         ReadOnlyRootFilesystemAnalyzer{},
+	"AllowedPortsService":            AllowedPortsServiceAnalyzer{},
+	"RootUser":                       RootUserAnalyzer{},
+	"PrivilegedContainer":            PrivilegedContainerAnalyzer{},
 }
 
 var additionalAnalyzerMap = map[string]common.IAnalyzer{
