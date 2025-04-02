@@ -51,6 +51,16 @@ var coreAnalyzerMap = map[string]common.IAnalyzer{
 	"AllowedPortsService":            AllowedPortsServiceAnalyzer{},
 	"RootUser":                       RootUserAnalyzer{},
 	"PrivilegedContainer":            PrivilegedContainerAnalyzer{},
+	"NonRootUser":                    NonRootUserAnalyzer{},
+	"LeastPrivilegedCapabilities":    LeastPrivilegedCapabilitiesAnalyzer{},
+	"AppArmorProfile":                AppArmorProfileAnalyzer{},
+	"HostNamespace":                  HostNamespaceAnalyzer{},
+	"PrivilegeEscalation":            PrivilegeEscalationAnalyzer{},
+	"TrustedRegistry":                TrustedRegistryAnalyzer{},
+	"ResourceLimits":                 ResourceLimitsAnalyzer{},
+	"SecCompProfile":                 SeccompProfileAnalyzer{},
+	"RunAsUser":                      RunAsUserAnalyzer{},
+	"DropCapabilities":               DropCapabilitiesAnalyzer{},
 }
 
 var additionalAnalyzerMap = map[string]common.IAnalyzer{
