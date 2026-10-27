@@ -61,6 +61,16 @@ var coreAnalyzerMap = map[string]common.IAnalyzer{
 	"SecCompProfile":                 SeccompProfileAnalyzer{},
 	"RunAsUser":                      RunAsUserAnalyzer{},
 	"DropCapabilities":               DropCapabilitiesAnalyzer{},
+	"TLSMinVersion":                  TLSMinVersionAnalyzer{},
+	"STIGImage":                      STIGImageAnalyzer{},
+	"PSALabels":                      PSALabelsAnalyzer{},
+	"SecretKeyMaterial":              SecretKeyMaterialAnalyzer{},
+	"HardcodedCredentials":           HardcodedCredentialsAnalyzer{},
+	"DualStack":                      DualStackAnalyzer{},
+	"ACMECertificate":                ACMECertificateAnalyzer{},
+	"CertificateLifespan":            CertificateLifespanAnalyzer{},
+	"AuditPolicy":                    AuditPolicyAnalyzer{},
+	"EncryptionAtRest":               EncryptionAtRestAnalyzer{},
 }
 
 var additionalAnalyzerMap = map[string]common.IAnalyzer{
